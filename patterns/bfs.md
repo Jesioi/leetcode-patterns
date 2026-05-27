@@ -12,6 +12,8 @@ belong to the current/future levels
 
 Template:
 
+```Java
+
 Queue<TreeNode> q = new LinkedList<>();
 q.offer(root);
 
@@ -33,6 +35,7 @@ while (!q.isEmpty()) {
     }
 
 }
+```
 
 Signals:
 

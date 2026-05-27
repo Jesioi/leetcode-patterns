@@ -10,6 +10,7 @@ Core Invariant:
 subtree information is fully computed
 before parent processes result
 
+```Java
 Template:
 
 int dfs(TreeNode root) {
@@ -24,6 +25,7 @@ int dfs(TreeNode root) {
     return combine(left, right);
 
 }
+```
 
 Common Returned Info:
 

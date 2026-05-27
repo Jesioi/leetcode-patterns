@@ -12,6 +12,8 @@ trees are equal only if:
 
 Template:
 
+```Java
+
 boolean same(TreeNode p, TreeNode q) {
 
     if (p == null && q == null) {
@@ -30,6 +32,7 @@ boolean same(TreeNode p, TreeNode q) {
         && same(p.right, q.right);
 
 }
+```
 
 Signals:
 

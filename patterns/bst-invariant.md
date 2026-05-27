@@ -9,9 +9,11 @@ produces sorted order
 
 Template:
 
+```Java
 inorder(left)
 visit(root)
 inorder(right)
+```
 
 Common Uses:
 

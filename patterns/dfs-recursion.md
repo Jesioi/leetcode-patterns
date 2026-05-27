@@ -13,6 +13,8 @@ the same problem for a smaller subtree
 
 Template:
 
+```Java
+
 public int dfs(TreeNode root) {
 
     if (root == null) {
@@ -25,6 +27,7 @@ public int dfs(TreeNode root) {
     return ...
 
 }
+```
 
 Common Uses:
 

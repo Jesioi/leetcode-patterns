@@ -9,6 +9,8 @@ current path represents traversal state
 
 Template:
 
+```Java
+
 void dfs(TreeNode root) {
 
     if (root == null) {
@@ -23,6 +25,7 @@ void dfs(TreeNode root) {
     path.remove(path.size() - 1);
 
 }
+```
 
 Signals:
 
