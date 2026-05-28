@@ -1,4 +1,4 @@
-# Bottom-Up Tree Recursion
+# Return-value DFS
 
 Core Pattern:
 children return information upward
@@ -10,13 +10,13 @@ Core Invariant:
 subtree information is fully computed
 before parent processes result
 
-```Java
 Template:
 
+```java
 int dfs(TreeNode root) {
 
     if (root == null) {
-        return ...
+        return ...;
     }
 
     int left = dfs(root.left);
@@ -30,26 +30,35 @@ int dfs(TreeNode root) {
 Common Returned Info:
 
 - height
-- balanced status
-- path sum
-- diameter
-- ancestor node
+- depth
+- subtree size
+- valid / invalid state
+- max gain from current node
+- found node / null
 
 Signals:
 
 - balanced tree
-- diameter
+- subtree height
+- subtree size
 - lowest common ancestor
-- maximum path
+- maximum path contribution
 
 Representative Problems:
 
+- Maximum Depth of Binary Tree
 - Balanced Binary Tree
-- Diameter of Binary Tree
 - Lowest Common Ancestor
+- Binary Tree Maximum Path Sum
 
 Common Pitfalls:
 
-- mixing preorder/postorder logic
-- recomputing subtree results
+- mixing return value with global answer
+- returning full path when parent can only use one branch
+- forgetting special failure state
 - incorrect combine step
+- recomputing subtree results
+
+```
+
+```
