@@ -1,52 +1,54 @@
 # Topological Sort
 
 Core Pattern:
-Resolve dependency ordering in directed acyclic graph
+Process nodes whose prerequisites
+are already satisfied
 
 Core Insight:
-A node can only be processed
-after its prerequisites are resolved.
+A node can be processed only when
+all incoming dependencies are resolved
 
-Two Main Approaches:
+Invariant:
+Every node entering queue
+has indegree == 0
 
-1. BFS / Kahn's Algorithm
+Primary Approach:
+
+1. Kahn BFS
 
 - indegree
 - queue
 - remove edges
 
-2. DFS Cycle Detection
+Recognition Signals:
 
-- visiting state
-- detect cycles recursively
-
-Core Components:
-
-- adjacency list
-- indegree
-- queue or DFS state
-- cycle detection
-
-Template Signal:
-
-- prerequisites
-- dependency graph
-- course ordering
+- prerequisite
+- dependency
+- build order
 - scheduling
+- before / after relationship
 - directed graph
 
 Key Question:
-Can all nodes be processed without cycle?
+
+Can all nodes be processed?
+
+If yes:
+Topological ordering exists
+
+If no:
+Cycle exists
 
 Common Bugs:
 
 - reversing edge direction
 - forgetting indegree update
-- processing node twice
-- incorrect cycle state handling
+- only enqueueing one zero-indegree node
+- not initializing adjacency list
 - ignoring disconnected graph
 
 Representative Problems:
 
 - Course Schedule
 - Course Schedule II
+- Alien Dictionary
